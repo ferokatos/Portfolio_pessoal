@@ -1,0 +1,36 @@
+/* Variáveis - Catppucin mocha*/
+
+:root {
+  --background: #1e1e2e;
+  --surface:    #313244;
+  --overlay:    #6c7086;
+  --text:       #cdd6f4;
+  --purple:     #cba6f7;
+  --pink:       #f5c2e7;
+  --blue:       #89b4fa;
+  --green:      #a6e3a1;
+}
+
+/*Ajuste de magens e bordas da página web:*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Corpo da página*/
+
+body {
+    background-color: var(--background); /*Cor de fundo do site*/
+    color:var(--text); /*Cor dos textos*/
+    font-family: "Inter", sans-serif; /*Fonte de texto*/
+    font-size: 16px; /*Tamanho da fonte*/
+    line-height: 1.6; /*Espaço entre as linhas*/
+}
+
+/*Classe de fonte especial(estilo código)*/
+
+.codigo {
+    font-family: "JetBrains Mono",monospace;
+    color: var(--purple);
+}
