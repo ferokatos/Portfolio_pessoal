@@ -34,3 +34,58 @@ body {
     font-family: "JetBrains Mono",monospace;
     color: var(--purple);
 }
+
+/*Recolorindo icones*/
+img {
+    filter: brightness(0) saturate(100%) invert(89%) sepia(19%) saturate(387%) hue-rotate(194deg) brightness(102%) contrast(97%);
+}
+
+/*Personalizando os links*/
+a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.container {
+  max-width: 1100px;   /* largura máxima */
+  margin: 0 auto;      /* centraliza na página */
+  padding: 0 20px;     /* espaço nas laterais */
+}
+
+/*Personalização do header*/
+header {
+    display: flex; 
+    justify-content: space-between; /*Logo na esquerda e Nav na direita*/
+    align-items: center; /*centraliza verticalmente*/
+    padding: 20px 5%; /*Espaço interno*/
+    border-bottom: 1px solid var(--surface); /*cria uma linha embaixo*/
+}
+/*Personalizando minha logo*/
+.codigo {
+    font-family: "JetBrains Mono",monospace;
+    font-size: 1.2rem;
+    color: var(--purple);
+    letter-spacing: 2px; /*espaçamento entre as letras*/
+}
+
+/*Configurando NAV(centralizar lado à lado)*/
+nav ul {
+    display: flex;  /*itens do menu a lado*/
+    list-style: none;/* tira as bolinas da lista */
+    gap: 2rem; /* espaço entre as linhas */
+}
+
+nav a{
+    font-family: "Inter",sans-serif;
+    font-size: 0.95rem;
+    color: var(--purple);
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.3s, transform 0.3s; /*animação suave ao passar por cima com o cursor*/
+    display: inline-block;
+}
+
+nav a:hover {
+    color: rgb(140, 0, 255); /*fica roxo ao passar o mouse*/
+    transform: translateY(-1px);
+}
