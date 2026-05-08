@@ -24,7 +24,7 @@ body {
     background-color: var(--background); /*Cor de fundo do site*/
     color:var(--text); /*Cor dos textos*/
     font-family: "Inter", sans-serif; /*Fonte de texto*/
-    font-size: 16px; /*Tamanho da fonte*/
+    font-size: 14px; /*Tamanho da fonte*/
     line-height: 1.6; /*Espaço entre as linhas*/
 }
 
@@ -35,9 +35,17 @@ body {
     color: var(--purple);
 }
 
-/*Recolorindo icones*/
+/*Personalizando nossos icones*/
 img {
     filter: brightness(0) saturate(100%) invert(89%) sepia(19%) saturate(387%) hue-rotate(194deg) brightness(102%) contrast(97%);
+    width: 18px; /*largura*/
+    height: 18px; /*altura*/
+    object-fit: contain; /*não distorce a imagem*/
+}
+
+.stacks li img{
+    filter: brightness(0) saturate(100%) invert(77%) sepia(30%) saturate(600%) hue-rotate(200deg) brightness(105%) contrast(95%);
+    transition: filter 0.3s;
 }
 
 /*Personalizando os links*/
@@ -88,4 +96,34 @@ nav a{
 nav a:hover {
     color: rgb(140, 0, 255); /*fica roxo ao passar o mouse*/
     transform: translateY(-1px);
+}
+
+/*Lista de Stacks - ícones que ficam ao lado do texto*/
+section ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /*quebra a linha se não couber*/
+    gap: 1rem;
+}
+
+section ul li{
+    display: flex; /*Ícone e texto lado a lado*/
+    align-items: center; /*Alinha verticalmente*/
+    gap: 8px; /*Espaço entre ícone e texto*/
+}
+
+.stacks li {
+    background-color: rgba(66, 34, 85, 0.226); /*fundo transparente*/
+    border: 1px solid var(--purple); /*borda roxa*/
+    color: var(--purple); /*texto roxo*/
+    padding: 6px 14px; /*espaços interno*/
+    border-radius:  6px;
+    font-family: "JetBrains Mono",monospace;
+    transition: background-color 0.3s, color 0.3s; /*animação suave*/
+    cursor: default; /*Cursor normal encima*/
+}
+
+.stacks li:hover{
+    background-color: rgba(132, 0, 255, 0.452);
+
 }
