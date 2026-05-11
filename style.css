@@ -43,6 +43,7 @@ body {
   font-size: 1.2rem;                        /* tamanho levemente maior */
   color: var(--purple);                     /* cor roxa */
   letter-spacing: 2px;                      /* espaço entre as letras */
+  box-shadow: 0 5px px rgb(133, 11, 255);
 }
 
 /* ═══════════════════════════════════
@@ -193,16 +194,20 @@ section ul li {
   justify-content: space-between; /* título no topo, cards no fundo */
 }
 
+
 /* Título "Contatos" igual ao "Quem sou eu?" */
 .sobre-contatos h2 {
   font-size: 1.8rem;   /* mesmo tamanho visual do h1 */
   font-weight: 700;    /* negrito */
   margin-bottom: 1rem; /* espaço abaixo do título */
+  font-family: 'Space Mono', monospace;
 }
 
 /*Espaço abaixo do titulo*/
-#sobre h1{
+#sobre h2{
     margin-bottom: 1.5rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.8rem;
 }
 #sobre .codigo{
     margin-bottom: 0.5rem;
@@ -241,6 +246,7 @@ section ul li {
   align-items: center; /* alinha verticalmente */
   gap: 12px;           /* espaço entre ícone e texto */
   color: var(--purple);  /* cor do texto */
+  
 }
 .lista-contatos li img{
      filter: brightness(0) saturate(100%) invert(77%) sepia(30%) saturate(600%) hue-rotate(200deg) brightness(105%) contrast(95%); /* recolore pra cor --purple */
@@ -304,6 +310,7 @@ section ul li {
     color: var(--purple); /*cor de texto*/
     text-transform: uppercase; /*texto em maiúsculo*/
     letter-spacing: 1px; /*Espaçamento entre as letras*/
+    font-family: 'Space Mono', monospace;
 }
 
 /*Configuração da exibição do video*/
