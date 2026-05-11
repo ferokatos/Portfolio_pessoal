@@ -232,6 +232,7 @@ section ul li {
 /* Card quando o mouse passa em cima */
 .lista-contatos li:hover {
   background-color: rgba(132, 0, 255, 0.452); /* borda fica roxa */;
+  box-shadow: 0 5px 40px rgb(42, 31, 53);
 }
 
 /* Link dentro do card */
@@ -280,6 +281,7 @@ section ul li {
 .card:hover{
     border-color: rgba(132, 0, 255, 0.452); /*borda fica roxinha*/
     transform: translateY(-6px); /*sobe um pouquinho*/
+    box-shadow: 0 10px 40px rgb(153, 0, 255);
 }
 /*Número(título do projeto)*/
 .card h3{
