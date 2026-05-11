@@ -331,3 +331,180 @@ footer{
     font-size: 0.85rem; /*tamanho de texto*/
 
 }
+
+/* ═══════════════════════════════════
+   RESPONSIVIDADE — TABLET
+═══════════════════════════════════ */
+
+@media (max-width: 1024px) {
+
+  /* Grid dos projetos vira 2 colunas */
+  .projetos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Diminui espaço lateral */
+  header {
+    padding: 20px 30px;
+  }
+
+  .sobre-wrapper {
+    gap: 2rem;
+  }
+
+}
+
+
+/* ═══════════════════════════════════
+   RESPONSIVIDADE — CELULAR
+═══════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+  /* ===== BODY ===== */
+
+  body {
+    font-size: 13px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+
+  /* ===== HEADER ===== */
+
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 20px 16px;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+
+  /* ===== SOBRE ===== */
+
+  .sobre-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .sobre-texto,
+  .sobre-contatos {
+    width: 100%;
+  }
+
+  .sobre-texto {
+    text-align: left;
+  }
+
+  #sobre h2,
+  .sobre-contatos h2 {
+    font-size: 1.5rem;
+  }
+
+
+  /* ===== STACKS ===== */
+
+  section ul {
+    gap: 0.7rem;
+  }
+
+  .stacks li {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+
+  /* ===== CONTATOS ===== */
+
+  .lista-contatos li {
+    padding: 12px;
+  }
+
+  .lista-contatos a {
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+
+
+  /* ===== PROJETOS ===== */
+
+  #projetos {
+    padding: 40px 0;
+  }
+
+  .projetos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 1.2rem;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.82rem;
+  }
+
+  .card video {
+    height: auto;
+  }
+
+
+  /* ===== FOOTER ===== */
+
+  footer {
+    padding: 1.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+}
+
+
+/* ═══════════════════════════════════
+   RESPONSIVIDADE — CELULARES PEQUENOS
+═══════════════════════════════════ */
+
+@media (max-width: 480px) {
+
+  .codigo {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  nav ul {
+    gap: 0.8rem;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+  }
+
+  #sobre h2,
+  .sobre-contatos h2 {
+    font-size: 1.3rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .card video {
+    border-radius: 6px;
+  }
+
+}
