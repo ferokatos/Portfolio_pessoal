@@ -226,12 +226,12 @@ section ul li {
   border: 1px solid var(--overlay); /* borda acinzentada */
   border-radius: 8px;               /* cantos arredondados */
   padding: 12px 16px;               /* espaço interno */
-  transition: border-color 0.3s;    /* animação suave */
+   transition: background-color 0.3s, color 0.3s; /* animação suave */
 }
 
 /* Card quando o mouse passa em cima */
 .lista-contatos li:hover {
-  border-color: rgba(132, 0, 255, 0.452); /* borda fica roxa */
+  background-color: rgba(132, 0, 255, 0.452); /* borda fica roxa */;
 }
 
 /* Link dentro do card */
