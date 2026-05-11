@@ -1,129 +1,224 @@
-/* Variáveis - Catppucin mocha*/
-
+/* ═══════════════════════════════════
+   VARIÁVEIS - Catppuccin Mocha
+   Define as cores do tema num lugar só
+═══════════════════════════════════ */
 :root {
-  --background: #1e1e2e;
-  --surface:    #313244;
-  --overlay:    #6c7086;
-  --text:       #cdd6f4;
-  --purple:     #cba6f7;
-  --pink:       #f5c2e7;
-  --blue:       #89b4fa;
-  --green:      #a6e3a1;
+  --background: #1e1e2e; /* cor de fundo principal */
+  --surface:    #313244; /* fundo dos cards */
+  --overlay:    #6c7086; /* texto apagado / bordas sutis */
+  --text:       #cdd6f4; /* cor do texto principal */
+  --purple:     #cba6f7; /* roxo — cor de destaque */
+  --pink:       #f5c2e7; /* rosa */
+  --blue:       #89b4fa; /* azul */
+  --green:      #a6e3a1; /* verde */
 }
 
-/*Ajuste de magens e bordas da página web:*/
+/* ═══════════════════════════════════
+   RESET
+   Zera margens e bordas padrão do navegador
+═══════════════════════════════════ */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;           /* remove espaço externo padrão */
+  padding: 0;          /* remove espaço interno padrão */
+  box-sizing: border-box; /* padding não aumenta o tamanho do elemento */
 }
 
-/*Corpo da página*/
-
+/* ═══════════════════════════════════
+   CORPO DA PÁGINA
+═══════════════════════════════════ */
 body {
-    background-color: var(--background); /*Cor de fundo do site*/
-    color:var(--text); /*Cor dos textos*/
-    font-family: "Inter", sans-serif; /*Fonte de texto*/
-    font-size: 14px; /*Tamanho da fonte*/
-    line-height: 1.6; /*Espaço entre as linhas*/
+  background-color: var(--background); /* cor de fundo do site */
+  color: var(--text);                  /* cor padrão dos textos */
+  font-family: "Inter", sans-serif;    /* fonte padrão */
+  font-size: 14px;                     /* tamanho base dos textos */
+  line-height: 1.6;                    /* espaço entre linhas */
 }
 
-/*Classe de fonte especial(estilo código)*/
-
+/* ═══════════════════════════════════
+   FONTE ESTILO CÓDIGO
+   Usada na logo e nos títulos de seção
+═══════════════════════════════════ */
 .codigo {
-    font-family: "JetBrains Mono",monospace;
-    color: var(--purple);
+  font-family: "JetBrains Mono", monospace; /* fonte estilo terminal */
+  font-size: 1.2rem;                        /* tamanho levemente maior */
+  color: var(--purple);                     /* cor roxa */
+  letter-spacing: 2px;                      /* espaço entre as letras */
 }
 
-/*Personalizando nossos icones*/
+/* ═══════════════════════════════════
+   ÍCONES
+   Tamanho fixo e cor igual ao texto
+═══════════════════════════════════ */
 img {
-    filter: brightness(0) saturate(100%) invert(89%) sepia(19%) saturate(387%) hue-rotate(194deg) brightness(102%) contrast(97%);
-    width: 18px; /*largura*/
-    height: 18px; /*altura*/
-    object-fit: contain; /*não distorce a imagem*/
+  filter: brightness(0) saturate(100%) invert(89%) sepia(19%) saturate(387%) hue-rotate(194deg) brightness(102%) contrast(97%); /* recolore a imagem pra cor --text */
+  width: 18px;         /* largura fixa */
+  height: 18px;        /* altura fixa */
+  object-fit: contain; /* não distorce a imagem */
 }
 
-.stacks li img{
-    filter: brightness(0) saturate(100%) invert(77%) sepia(30%) saturate(600%) hue-rotate(200deg) brightness(105%) contrast(95%);
-    transition: filter 0.3s;
+/* Ícones dentro das stacks — cor roxa */
+.stacks li img {
+  filter: brightness(0) saturate(100%) invert(77%) sepia(30%) saturate(600%) hue-rotate(200deg) brightness(105%) contrast(95%); /* recolore pra cor --purple */
+  transition: filter 0.3s; /* animação suave no hover */
 }
 
-/*Personalizando os links*/
+/* ═══════════════════════════════════
+   LINKS
+   Remove sublinhado e cor azul padrão
+═══════════════════════════════════ */
 a {
-    text-decoration: none;
-    color: var(--text);
+  text-decoration: none; /* remove sublinhado */
+  color: var(--text);    /* cor igual ao texto normal */
 }
 
+/* ═══════════════════════════════════
+   CONTAINER
+   Centraliza e limita a largura do conteúdo
+═══════════════════════════════════ */
 .container {
-  max-width: 1100px;   /* largura máxima */
-  margin: 0 auto;      /* centraliza na página */
-  padding: 0 20px;     /* espaço nas laterais */
+  max-width: 1100px; /* largura máxima */
+  margin: 0 auto;    /* centraliza horizontalmente na página */
+  padding: 0 20px;   /* espaço nas laterais */
 }
 
-/*Personalização do header*/
+/* ═══════════════════════════════════
+   HEADER
+   Barra do topo com logo e navegação
+═══════════════════════════════════ */
 header {
-    display: flex; 
-    justify-content: space-between; /*Logo na esquerda e Nav na direita*/
-    align-items: center; /*centraliza verticalmente*/
-    padding: 20px 5%; /*Espaço interno*/
-    border-bottom: 1px solid var(--surface); /*cria uma linha embaixo*/
-}
-/*Personalizando minha logo*/
-.codigo {
-    font-family: "JetBrains Mono",monospace;
-    font-size: 1.2rem;
-    color: var(--purple);
-    letter-spacing: 2px; /*espaçamento entre as letras*/
+  display: flex;                          /* coloca filhos lado a lado */
+  justify-content: space-between;         /* logo na esquerda, nav na direita */
+  align-items: center;                    /* centraliza verticalmente */
+  padding: 20px 5%;                       /* espaço interno */
+  border-bottom: 1px solid var(--surface); /* linha sutil embaixo */
 }
 
-/*Configurando NAV(centralizar lado à lado)*/
+/* ═══════════════════════════════════
+   NAVEGAÇÃO
+   Links do menu lado a lado
+═══════════════════════════════════ */
 nav ul {
-    display: flex;  /*itens do menu a lado*/
-    list-style: none;/* tira as bolinas da lista */
-    gap: 2rem; /* espaço entre as linhas */
+  display: flex;    /* itens lado a lado */
+  list-style: none; /* remove bolinhas da lista */
+  gap: 2rem;        /* espaço entre os links */
 }
 
-nav a{
-    font-family: "Inter",sans-serif;
-    font-size: 0.95rem;
-    color: var(--purple);
-    text-decoration: none;
-    letter-spacing: 1px;
-    transition: color 0.3s, transform 0.3s; /*animação suave ao passar por cima com o cursor*/
-    display: inline-block;
+/* Link do nav no estado normal */
+nav a {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  color: var(--purple);          /* cor roxa */
+  text-decoration: none;         /* sem sublinhado */
+  letter-spacing: 1px;           /* espaço entre letras */
+  transition: color 0.3s, transform 0.3s; /* animação suave */
+  display: inline-block;         /* necessário pro transform funcionar */
 }
 
+/* Link do nav quando o mouse passa em cima */
 nav a:hover {
-    color: rgb(140, 0, 255); /*fica roxo ao passar o mouse*/
-    transform: translateY(-1px);
+  color: rgba(132, 0, 255, 0.452);    /* fica roxo mais escuro */
+  transform: translateY(-1px); /* sobe 1px suavemente */
 }
 
-/*Lista de Stacks - ícones que ficam ao lado do texto*/
-section ul{
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap; /*quebra a linha se não couber*/
-    gap: 1rem;
+/* ═══════════════════════════════════
+   LISTAS GERAIS DAS SEÇÕES
+═══════════════════════════════════ */
+
+/* A lista em si */
+section ul {
+  list-style: none; /* remove bolinhas */
+  display: flex;    /* itens lado a lado */
+  flex-wrap: wrap;  /* quebra linha se não couber */
+  gap: 1rem;        /* espaço entre os itens */
 }
 
-section ul li{
-    display: flex; /*Ícone e texto lado a lado*/
-    align-items: center; /*Alinha verticalmente*/
-    gap: 8px; /*Espaço entre ícone e texto*/
+/* Cada item da lista */
+section ul li {
+  display: flex;       /* ícone e texto lado a lado */
+  align-items: center; /* alinha verticalmente */
+  gap: 8px;            /* espaço entre ícone e texto */
 }
 
+/* ═══════════════════════════════════
+   BADGES DAS STACKS
+   Caixinhas com as tecnologias
+═══════════════════════════════════ */
+
+/* Cada badge */
 .stacks li {
-    background-color: rgba(66, 34, 85, 0.226); /*fundo transparente*/
-    border: 1px solid var(--purple); /*borda roxa*/
-    color: var(--purple); /*texto roxo*/
-    padding: 6px 14px; /*espaços interno*/
-    border-radius:  6px;
-    font-family: "JetBrains Mono",monospace;
-    transition: background-color 0.3s, color 0.3s; /*animação suave*/
-    cursor: default; /*Cursor normal encima*/
+  background-color: rgba(66, 34, 85, 0.226); /* fundo levemente roxo */
+  border: 1px solid var(--purple);            /* borda roxa */
+  color: var(--purple);                       /* texto roxo */
+  padding: 6px 14px;                          /* espaço interno */
+  border-radius: 6px;                         /* cantos arredondados */
+  font-family: "JetBrains Mono", monospace;   /* fonte estilo código */
+  transition: background-color 0.3s, color 0.3s; /* animação suave */
+  cursor: default;                            /* cursor normal (não vira mãozinha) */
 }
 
-.stacks li:hover{
-    background-color: rgba(132, 0, 255, 0.452);
+/* Badge quando o mouse passa em cima */
+.stacks li:hover {
+  background-color: rgba(132, 0, 255, 0.452); /* fundo roxo mais forte */
+}
 
+/* ═══════════════════════════════════
+   SEÇÃO SOBRE — WRAPPER
+   Divide texto (esquerda) e contatos (direita)
+═══════════════════════════════════ */
+
+/* Div que segura os dois lados */
+.sobre-wrapper {
+  display: flex;           /* coloca filhos lado a lado */
+  gap: 4rem;               /* espaço entre esquerda e direita */
+  align-items: flex-start; /* alinha pelo topo */
+  margin-top: 2rem;        /* espaço acima do wrapper */
+}
+
+/* Lado esquerdo — texto e stacks */
+.sobre-texto {
+  flex: 2;                 /* ocupa 2/3 do espaço */
+  display: flex;           /* empilha os filhos */
+  flex-direction: column;  /* na vertical */
+  gap: 1rem;               /* espaço entre parágrafos */
+  text-align: left;        /* texto alinhado à esquerda */
+}
+
+/* Lado direito — contatos */
+.sobre-contatos {
+  flex: 1; /* ocupa 1/3 do espaço */
+}
+
+/* ═══════════════════════════════════
+   CARDS DE CONTATO
+═══════════════════════════════════ */
+
+/* A lista de contatos */
+.lista-contatos {
+  display: flex;           /* empilha os cards */
+  flex-direction: column;  /* na vertical */
+  gap: 0.8rem;             /* espaço entre os cards */
+  margin-top: 1rem;        /* espaço acima da lista */
+  list-style: none;        /* remove bolinhas */
+}
+
+/* Cada card de contato */
+.lista-contatos li {
+  background-color: var(--surface); /* fundo do card */
+  border: 1px solid var(--overlay); /* borda acinzentada */
+  border-radius: 8px;               /* cantos arredondados */
+  padding: 12px 16px;               /* espaço interno */
+  transition: border-color 0.3s;    /* animação suave */
+}
+
+/* Card quando o mouse passa em cima */
+.lista-contatos li:hover {
+  border-color: rgba(132, 0, 255, 0.452); /* borda fica roxa */
+}
+
+/* Link dentro do card */
+.lista-contatos a {
+  display: flex;       /* ícone e texto lado a lado */
+  align-items: center; /* alinha verticalmente */
+  gap: 12px;           /* espaço entre ícone e texto */
+  color: var(--text);  /* cor do texto */
 }
