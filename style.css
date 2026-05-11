@@ -117,7 +117,7 @@ nav a {
 
 /* Link do nav quando o mouse passa em cima */
 nav a:hover {
-  color: rgba(132, 0, 255, 0.452);    /* fica roxo mais escuro */
+  color: rgb(132, 0, 255);    /* fica roxo mais escuro */
   transform: translateY(-1px); /* sobe 1px suavemente */
 }
 
@@ -295,6 +295,7 @@ section ul li {
     font-weight: 700; /*texto em negrito*/
     color: var(--purple); /*cor do texto*/
     text-transform: uppercase;
+    font-family: 'Space Mono', monospace;
 }
 
 /*Descrição do projeto*/
