@@ -245,3 +245,79 @@ section ul li {
      filter: brightness(0) saturate(100%) invert(77%) sepia(30%) saturate(600%) hue-rotate(200deg) brightness(105%) contrast(95%); /* recolore pra cor --purple */
   transition: filter 0.3s; /* animação suave no hover */
 }
+
+/* ═══════════════════════════════════
+   SEÇÃO PROJETOS
+═══════════════════════════════════ */
+
+/*Título da sessão*/
+#projetos{
+    padding: 60px; /*Espaço acima e abaixo da sessão*/
+}
+
+/*Grid dos Cards(3 por linha)*/
+
+.projetos-grid {
+    display: grid; /*ativa o grid*/
+    grid-template-columns: repeat(3, 1fr); /*3 colunas iguais*/
+    gap: 1.5rem; /*Espaço entre os cards*/
+    margin-top: 2rem; /*Espaço acima do grid*/
+}
+
+/*Configurando O card em si agora*/
+.card {
+    background-color: var(--surface); /*Fundo levemente mais claro*/
+    border: 1px solid var(--overlay); /*borda sutil*/
+    border-radius: 12px; /*Cantos arredondados*/
+    padding: 1.5rem; /*Espaço interno*/
+    display: flex; /*empilha os sub-elementos*/
+    flex-direction: column; /*alinha na vertical*/
+    gap: 0.8rem; /*espaço entre título, texto e vídeo*/
+    transition: border-color 0.3s, transform 0.3s; /*Animação suave*/
+
+}
+/*animação quando o mouse passar encima*/
+.card:hover{
+    border-color: rgba(132, 0, 255, 0.452); /*borda fica roxinha*/
+    transform: translateY(-6px); /*sobe um pouquinho*/
+}
+/*Número(título do projeto)*/
+.card h3{
+    font-size: 1.1rem; /*tamanho do título*/
+    font-weight: 700; /*texto em negrito*/
+    color: var(--purple); /*cor do texto*/
+    text-transform: uppercase;
+}
+
+/*Descrição do projeto*/
+.card p{
+    font-size: 0.85rem; /*tamanho do texto*/
+    color: var(--text); /*cor do texto*/ 
+    line-height: 1.6; /*Espaçamento entre as linhas*/
+}
+
+/*Título dos colaboradores*/
+.card h4{
+    font-size: 0.75rem; /*tamanho do texto*/
+    color: var(--purple); /*cor de texto*/
+    text-transform: uppercase; /*texto em maiúsculo*/
+    letter-spacing: 1px; /*Espaçamento entre as letras*/
+}
+
+/*Configuração da exibição do video*/
+.card video{
+    width: 100%; /*largura do video*/
+    height: 160px; /*altura do video*/
+    object-fit: cover; /*não distorce o vídeo*/
+    border-radius: 8px;/*arredonda os coantos do video*/
+    margin-top: 0.5rem; /*Espaço acima do vídeo*/
+}
+
+footer{
+    text-align: center; /*Alinha o texto ao centro*/
+    padding: 2rem 0; /*Espaço interno*/
+    border-top: 1px solid var(--purple); /*linha sútil encima*/
+    color: var(--overlay); /*cor do texto*/
+    font-size: 0.85rem; /*tamanho de texto*/
+
+}
