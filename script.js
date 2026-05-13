@@ -23,3 +23,28 @@ const minhaIdade = calcularIdade(17, 6, 2006);
 
 // Coloca a idade no HTML automaticamente
 document.getElementById('idade').textContent = minhaIdade;
+
+function calcularSemestre(ano = 2025) {
+
+    // pega a data atual
+    const dataAtual = new Date();
+
+    // calcula quantos anos passaram
+    const anosPassados =
+        dataAtual.getFullYear() - ano;
+
+    // cada ano possui 2 semestres
+    let semestre = anosPassados * 2;
+
+    // verifica semestre atual
+    if ((dataAtual.getMonth() + 1) <= 6) {
+        semestre += 1;
+    } else {
+        semestre += 2;
+    }
+
+    return semestre;
+}
+
+document.getElementById('semestre').textContent =
+    `${calcularSemestre()}º`;
