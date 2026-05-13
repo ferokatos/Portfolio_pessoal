@@ -45,6 +45,13 @@ body {
   letter-spacing: 2px;                      /* espaço entre as letras */
   box-shadow: 0 5px px rgb(133, 11, 255);
 }
+/*Logo do projeto*/
+.logo {
+  filter: none;
+  width: auto;
+  height: 40px;
+  object-fit: contain;
+}
 
 /* ═══════════════════════════════════
    ÍCONES
@@ -210,7 +217,7 @@ section ul li {
     font-size: 1.8rem;
 }
 #sobre .codigo{
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem; /*empura o próximo elemento para baixo*/
 }
 /* ═══════════════════════════════════
    CARDS DE CONTATO
