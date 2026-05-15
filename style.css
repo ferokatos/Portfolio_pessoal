@@ -1,6 +1,5 @@
 /* ═══════════════════════════════════
    VARIÁVEIS - Catppuccin Mocha
-   Define as cores do tema num lugar só
 ═══════════════════════════════════ */
 :root {
   --background: #1e1e2e; /* cor de fundo principal */
@@ -72,7 +71,6 @@ img {
 
 /* ═══════════════════════════════════
    LINKS
-   Remove sublinhado e cor azul padrão
 ═══════════════════════════════════ */
 a {
   text-decoration: none; /* remove sublinhado */
@@ -103,7 +101,6 @@ header {
 
 /* ═══════════════════════════════════
    NAVEGAÇÃO
-   Links do menu lado a lado
 ═══════════════════════════════════ */
 nav ul {
   display: flex;    /* itens lado a lado */
@@ -111,7 +108,7 @@ nav ul {
   gap: 2rem;        /* espaço entre os links */
 }
 
-/* Link do nav no estado normal */
+/* Link do nav */
 nav a {
   font-family: "Inter", sans-serif;
   font-size: 0.95rem;
@@ -149,7 +146,6 @@ section ul li {
 
 /* ═══════════════════════════════════
    BADGES DAS STACKS
-   Caixinhas com as tecnologias
 ═══════════════════════════════════ */
 
 /* Cada badge */
@@ -171,7 +167,6 @@ section ul li {
 
 /* ═══════════════════════════════════
    SEÇÃO SOBRE — WRAPPER
-   Divide texto (esquerda) e contatos (direita)
 ═══════════════════════════════════ */
 
 /* Div que segura os dois lados */
@@ -278,7 +273,7 @@ section ul li {
     margin-top: 2rem; /*Espaço acima do grid*/
 }
 
-/*Configurando O card em si agora*/
+/*Configurando O card em si*/
 .card {
     background-color: var(--surface); /*Fundo levemente mais claro*/
     border: 1px solid var(--overlay); /*borda sutil*/
@@ -339,6 +334,8 @@ footer{
 
 }
 
+
+/*Resolução no celular*/
 /* ═══════════════════════════════════
    RESPONSIVIDADE — TABLET
 ═══════════════════════════════════ */
