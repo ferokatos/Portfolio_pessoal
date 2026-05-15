@@ -32,10 +32,10 @@ Sou Allan Gabriel, estudante de Ciências da Computação no 3º período. Esse 
 
 ## Contatos
 
+- Gmail: [gabrielholallan09@gmail.com](https://mail.google.com/mail/?view=cm&fs=1&to=gabrielholallan09@gmail.com)
 - WhatsApp: [+55 (82) 99686-1866](https://wa.me/5582996861866)
 - Instagram: [@_bielhol](https://www.instagram.com/_bielhol/)
 - Discord: BLKZINN#7562
 - GitHub: [@ferokatos](https://github.com/ferokatos)
-
 ---
 
