@@ -47,3 +47,7 @@ function calcularSemestre(ano = 2025) {
 
 document.getElementById('semestre').textContent =
      `${calcularSemestre()}º`;
+
+
+//pega o ano atual
+document.getElementById('ano').textContent = new Date().getFullYear();
