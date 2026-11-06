@@ -1,148 +1,377 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Allan Gabriel de Holanda Paz">
-    <meta name="description" content="Portfólio pessoal">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=2">
-    <link rel="icon" href="logo/IMG_2430.PNG" type="image/png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Allan Gabriel de Holanda Paz" />
+    <meta name="description" content="Portfólio pessoal" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=2" />
+    <link rel="icon" href="logo/IMG_2430.PNG" type="image/png" />
     <title>Portfólio: Gabriel DEV</title>
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <!-- Cabeçalho do Site -->
     <header>
-        <img class="logo" src="logo/IMG_2430.PNG" alt="logo">
-        <!-- Navegação (Links do menu) -->
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre mim</a></li>
-                <li><a href="#contatos">Contatos</a></li>
-                <li><a href="#projetos">Projetos pessoais</a></li>
-            </ul>
-        </nav>
+      <!-- Navegação (Links do menu) -->
+      <nav>
+        <ul>
+          <li>
+            <a href="#home" class="active"
+              ><img src="icons/home.svg" alt="Home" class="nav-icon" /> Home</a
+            >
+          </li>
+          <li>
+            <a href="#sobre"
+              ><img src="icons/user.svg" alt="Sobre mim" class="nav-icon" />
+              Sobre mim</a
+            >
+          </li>
+          <li>
+            <a href="#projetos"
+              ><img src="icons/briefcase.svg" alt="Projetos" class="nav-icon" />
+              Projetos</a
+            >
+          </li>
+          <li>
+            <a href="#contatos"
+              ><img src="icons/envelope.svg" alt="Contatos" class="nav-icon" />
+              Contatos</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <!-- Parte principal do site -->
     <main>
-
-        <!-- Seção "Sobre mim" -->
-        <section id="sobre">
-            <div class="container">
-                <div class="sobre-wrapper">
-
-                    <div class="sobre-texto">
-                        <h2>Quem sou eu?</h2>
-                        <p>
-                            Sou Allan Gabriel de Holanda Paz, tenho <span id="idade"></span> anos e curso Ciências da Computação, atualmente no <span id="semestre"></span> período. Tenho interesse em tecnologia, especialmente em desenvolvimento web e programação, buscando sempre aprender novas ferramentas e conceitos. Estudo e pratico Python, HTML e CSS, desenvolvendo projetos para fortalecer minha experiência prática e lógica de programação. Também valorizo aprendizado contínuo, organização e criatividade, acreditando no impacto positivo da tecnologia na vida das pessoas.
-                        </p>
-
-                        <!-- Stacks ficam EMBAIXO do texto, dentro do sobre-texto -->
-                        <h2>ferramentas</h2>
-                        <ul class="stacks">
-                            <li>Python <img src="icons/python.png" alt="Python"></li>
-                            <li>HTML <img src="icons/html5.png" alt="HTML"></li>
-                            <li>CSS <img src="icons/css3.png" alt="CSS"></li>
-                            <li>VS Code <img src="icons/vscode-svgrepo-com.png" alt="VS Code"></li>
-                            <li>Git <img src="icons/git-icon-logo-svgrepo-com.png" alt="Git"></li>
-                        </ul>
-                    </div>
-
-                    <!-- DIREITA: contatos (ao lado do texto) -->
-                    <div class="sobre-contatos" id="contatos">
-                        <h2>Contatos</h2>
-                        <ul class="lista-contatos">
-                            <li>
-                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gabrielholallan09@gmail.com" target="_blank">
-                                    <img src="icons/envelope.png" alt="Icone de email">
-                                    gabrielholallan09@gmail.com
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://wa.me/5582996861866" target="_blank">
-                                    <img src="icons/whatsapp.png" alt="WhatsApp">
-                                    WhatsApp
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com/_bielhol/" target="_blank">
-                                    <img src="icons/instagram.png" alt="Instagram">
-                                    Instagram
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/ferokatos" target="_blank">
-                                    <img src="icons/github.png" alt="icone github">
-                                    Github
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://discord.com/users/BLKZINN#7562" target="_blank">
-                                    <img src="icons/discord.png" alt="Discord">
-                                    BLKZINN#7562
-                                </a>
-                            </li>
-                            
-                        </ul>
-                    </div>
-
-                </div>
+      <!-- Seção Hero -->
+      <section id="home" class="hero bg-hero">
+        <div class="container hero-container">
+          <div class="hero-left">
+            <h1>Allan Gabriel</h1>
+            <p class="subtitle">Desenvolvedor de Software & UI designer</p>
+            <div class="tech-icons">
+              <div class="icon-wrapper" title="Python">
+                <img src="icons/python.png" alt="Python" />
+              </div>
+              <div class="icon-wrapper" title="HTML5">
+                <img src="icons/html5.png" alt="HTML" />
+              </div>
+              <div class="icon-wrapper" title="CSS3">
+                <img src="icons/css3.png" alt="CSS" />
+              </div>
+              <div class="icon-wrapper" title="VS Code">
+                <img src="icons/vscode-svgrepo-com.png" alt="VS Code" />
+              </div>
+              <div class="icon-wrapper" title="Git">
+                <img src="icons/git-icon-logo-svgrepo-com.png" alt="Git" />
+              </div>
             </div>
-        </section>
-       <!-- Seção de projetos -->
-<section id="projetos">
-    <div class="container">
+          </div>
 
-        <p class="codigo">// projetos</p>
-        <div class="projetos-grid">
+          <div class="hero-center">
+            <div class="profile-placeholder">
+              <div class="glow-circle"></div>
+              <!-- Placeholder para a foto real no banner -->
+              <div class="photo-box">
+                <img
+                  src="perfil.jpeg"
+                  alt="Allan Gabriel"
+                  class="profile-img"
+                />
+              </div>
+            </div>
+          </div>
 
+          <div class="hero-right">
+            <a
+              href="https://wa.me/5582996861866?text=Ol%C3%A1%20Gabriel%2C%20vamos%20conversar%3F"
+              target="_blank"
+              class="btn-primary"
+              ><img
+                src="icons/whatsapp.png"
+                alt="imagem do whatsapp"
+                class="icon-small"
+              />
+              Vamos conversar</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção "Sobre mim" -->
+      <section id="sobre" class="section-margin bg-sobre">
+        <div class="container">
+          <div class="sobre-wrapper reveal">
+            <div class="sobre-imagem">
+              <div class="profile-placeholder">
+                <div class="glow-circle"></div>
+                <!-- Placeholder para a foto real -->
+                <div class="photo-box">
+                  <img
+                    src="perfil.jpeg"
+                    alt="Allan Gabriel"
+                    class="profile-img"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="sobre-texto">
+              <h2 class="section-title">Quem sou eu?</h2>
+              <p id="sobre-mim-conteudo">
+                Sou Allan Gabriel de Holanda Paz, tenho
+                <span id="idade"></span> anos e curso Ciência da Computação
+                (atualmente no <span id="semestre"></span> período). Minha
+                trajetória une a base teórica da universidade com a vivência
+                prática como Suporte Técnico no Instituto do Meio Ambiente
+                (IMA), garantindo o funcionamento de soluções tecnológicas
+                reais. Sou apaixonado por programação e desenvolvimento web,
+                focando meus estudos na criação de projetos em Python, HTML e
+                CSS. Sou movido pela curiosidade por novas ferramentas,
+                acreditando que a tecnologia bem aplicada, unida à organização e
+                criatividade, transforma rotinas e processos.
+              </p>
+
+              <!-- NOVA MINI-SESSÃO DE DETALHES -->
+              <!-- NOVA MINI-SESSÃO DE DETALHES (TABS) -->
+              <div class="sobre-detalhes-tabs">
+                <div class="tabs-header">
+                  <button class="tab-btn active" data-tab="tab-formacao">
+                    <span class="tab-icon icon-formacao"></span>
+                    Formação
+                  </button>
+                  <button class="tab-btn" data-tab="tab-experiencias">
+                    <span class="tab-icon icon-experiencias"></span>
+                    Experiências
+                  </button>
+                  <button class="tab-btn" data-tab="tab-certificados">
+                    <span class="tab-icon icon-certificados"></span>
+                    Certificados
+                  </button>
+                </div>
+                
+                <div class="tabs-content">
+                  <div id="tab-formacao" class="tab-pane active">
+                    <div class="timeline" id="timeline-formacao">
+                      <!-- Renderizado dinamicamente pelo Firebase -->
+                    </div>
+                  </div>
+                  <div id="tab-experiencias" class="tab-pane">
+                    <div class="timeline" id="timeline-experiencias">
+                      <!-- Renderizado dinamicamente pelo Firebase -->
+                    </div>
+                  </div>
+                  <div id="tab-certificados" class="tab-pane">
+                    <div class="timeline" id="timeline-certificados">
+                      <!-- Renderizado dinamicamente pelo Firebase -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Seção de projetos -->
+      <section id="projetos" class="section-margin bg-projetos">
+        <div class="container">
+          <h2 class="section-title reveal">Meus Projetos</h2>
+          <div class="projetos-grid">
             <!-- Projeto 1 -->
-            <div class="card">
+            <div class="card reveal" data-tipo="desktop">
+              <div class="card-media">
+                <video
+                  src="videos_do_projeto/Coletor_de_dados.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                ></video>
+              </div>
+              <div class="card-content">
                 <h3>Coletor de dados</h3>
-                <p>O Coletor de Informações do Computador é uma ferramenta portátil que coleta dados
-                completos de hardware e software de computadores Windows.
-                Ideal para inventário de TI, diagnóstico e documentação de máquinas.</p>
-                <h4>Colaboradores</h4>
-                <p>@ferokatos · @AlexJR96</p>
-                <video src="videos_do_projeto/Coletor_de_dados.mp4" autoplay muted loop playsinline></video>
+                <p>
+                  O Coletor de Informações do Computador é uma ferramenta
+                  portátil que coleta dados completos de hardware e software de
+                  computadores Windows. Ideal para inventário de TI, diagnóstico
+                  e documentação de máquinas.
+                </p>
+                <div class="card-footer">
+                  <h4>Colaboradores</h4>
+                  <p>@ferokatos · @AlexJR96</p>
+                </div>
+              </div>
             </div>
 
             <!-- Projeto 2 -->
-            <div class="card">
+            <div class="card reveal" data-tipo="desktop">
+              <div class="card-media">
+                <video
+                  src="videos_do_projeto/Gerador_de_planilhas(part_I).mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                ></video>
+              </div>
+              <div class="card-content">
                 <h3>Gerador de planilhas</h3>
-                <p>Sistema que automatiza a organização e centralização de informações de computadores
-                de diferentes setores, lendo arquivos JSON e gerando planilhas organizadas.</p>
-                <h4>Colaboradores</h4>
-                <p>@ferokatos · @AlexJR96</p>
-                <video src="videos_do_projeto/Gerador_de_planilhas(part_I).mp4" autoplay muted loop playsinline></video>
+                <p>
+                  Sistema que automatiza a organização e centralização de
+                  informações de computadores de diferentes setores, lendo
+                  arquivos JSON e gerando planilhas organizadas.
+                </p>
+                <div class="card-footer">
+                  <h4>Colaboradores</h4>
+                  <p>@ferokatos · @AlexJR96</p>
+                </div>
+              </div>
             </div>
 
             <!-- Projeto 3 -->
-            <div class="card">
-                <p class="em-breve">EM BREVE</p>
-                <h3>Otimizador Operacional</h3>
-                <p>WinPerfOpt é um utilitário leve e seguro para otimizar o desempenho do Windows 10 e 11,
-                aplicando otimizações inteligentes sem colocar seus dados em risco.</p>
-                <h4>Colaboradores</h4>
-                <p>@ferokatos</p>
+            <div class="card reveal" data-tipo="web">
+              <div class="card-media">
+                <!-- Substitua o src pelo link do seu projeto web -->
+                <iframe
+                  src="https://gerenciador-de-playlist.vercel.app/"
+                  title="AutoPlaylist Maker"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="card-content">
+                <h3>AutoPlaylist Maker</h3>
+                <p>
+                  Um sistema web inteligente para criação automatizada de
+                  playlists no YouTube. Basta digitar o nome do seu artista
+                  favorito, e o sistema buscará os melhores clipes musicais
+                  oficiais, permitindo que você selecione e gere uma playlist
+                  diretamente em sua conta do YouTube em questão de segundos.
+                </p>
+                <div class="card-footer">
+                  <h4>Colaboradores</h4>
+                  <p>@ferokatos · @MathiasBorges · @vitao-al</p>
+                </div>
+                <div class="card-actions">
+                  <a
+                    href="https://gerenciador-de-playlist.vercel.app/"
+                    class="btn-projeto"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="icons/external-link.svg" alt="Visitar" />
+                    Ver Projeto
+                  </a>
+                </div>
+              </div>
             </div>
 
-        </div>
-    </div>
-</section>
+            <!-- Projeto 4 -->
+            <div class="card reveal" data-tipo="desktop">
+              <div class="card-media placeholder-media">
+                <span class="badge badge-secondary">EM BREVE</span>
+              </div>
+              <div class="card-content">
+                <h3>Otimizador Operacional</h3>
+                <p>
+                  WinPerfOpt é um utilitário leve e seguro para otimizar o
+                  desempenho do Windows 10 e 11, aplicando otimizações
+                  inteligentes sem colocar seus dados em risco.
+                </p>
+                <div class="card-footer">
+                  <h4>Colaboradores</h4>
+                  <p>@ferokatos</p>
+                </div>
+              </div>
+            </div>
 
+            <!-- Exemplo de Projeto Web (Com Botão) -->
+            <!-- 
+            <div class="card" data-tipo="web">
+              <div class="card-media">
+                <img src="caminho_da_imagem.jpg" alt="Projeto Web" />
+              </div>
+              <div class="card-content">
+                <h3>Meu Projeto Web</h3>
+                <p>Descrição do projeto web...</p>
+                <div class="card-footer">
+                  <h4>Colaboradores</h4>
+                  <p>@ferokatos</p>
+                </div>
+                <div class="card-actions">
+                  <a href="LINK_DO_SITE" class="btn-projeto" target="_blank" rel="noopener noreferrer">
+                    <img src="icons/external-link.svg" alt="Visitar" />
+                    Ver Projeto
+                  </a>
+                </div>
+              </div>
+            </div> 
+            -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Contatos -->
+      <section id="contatos" class="section-margin bg-contatos">
+        <div class="container">
+          <h2 class="section-title reveal">Contatos</h2>
+          <div class="contatos-grid reveal">
+            <a
+              class="contato-card"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=gabrielholallan09@gmail.com"
+              target="_blank"
+            >
+              <img src="icons/envelope.png" alt="Email" />
+              <span>Email</span>
+            </a>
+            <a
+              class="contato-card"
+              href="https://wa.me/5582996861866"
+              target="_blank"
+            >
+              <img src="icons/whatsapp.png" alt="WhatsApp" />
+              <span>WhatsApp</span>
+            </a>
+            <a
+              class="contato-card"
+              href="https://www.instagram.com/_bielhol/"
+              target="_blank"
+            >
+              <img src="icons/instagram.png" alt="Instagram" />
+              <span>Instagram</span>
+            </a>
+            <a
+              class="contato-card"
+              href="https://github.com/ferokatos"
+              target="_blank"
+            >
+              <img src="icons/github.png" alt="Github" />
+              <span>Github</span>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- Rodapé(final do site) -->
-    <footer>
-        @<span id="ano"></span> · Allan Gabriel de Holanda Paz
-    </footer>
- <script src="script.js"></script>
-</body>
+    <!-- Botão Voltar ao Topo -->
+    <button id="btn-back-to-top" title="Voltar ao Topo">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
 
+    <script type="module" src="script.js"></script>
+  </body>
 </html>
