@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel Admin - Portfólio</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Estilos básicos para o admin para reaproveitar a paleta */
+      body {
+        padding: 40px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .admin-section {
+        background: var(--surface);
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .admin-section h2 {
+        color: var(--blue);
+        margin-top: 0;
+      }
+      label {
+        display: block;
+        margin-top: 15px;
+        color: var(--text);
+        font-weight: bold;
+      }
+      input, textarea, select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        background: var(--base);
+        color: var(--text);
+        border: 1px solid var(--overlay);
+        border-radius: 6px;
+      }
+      button.btn-save {
+        background: var(--blue);
+        color: var(--base);
+        border: none;
+        padding: 10px 20px;
+        margin-top: 15px;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      button.btn-save:hover {
+        opacity: 0.9;
+      }
+      .hidden {
+        display: none;
+      }
+      #login-section {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Painel de Controle</h1>
+
+    <div id="login-section" class="admin-section">
+      <h2>Acesso Administrativo</h2>
+      <label>Email:</label>
+      <input type="email" id="login-email" />
+      <label>Senha:</label>
+      <input type="password" id="login-password" />
+      <button class="btn-save" id="btn-login">Entrar</button>
+      <p id="login-error" style="color: var(--red); display: none;">Erro ao logar.</p>
+    </div>
+
+    <div id="admin-content" class="hidden">
+      <button class="btn-save" id="btn-logout" style="background: var(--red); margin-bottom: 20px;">Sair</button>
+
+      <!-- Sobre Mim -->
+      <div class="admin-section">
+        <h2>Editar "Sobre Mim"</h2>
+        <textarea id="sobre-mim-text" rows="5"></textarea>
+        <button class="btn-save" id="btn-save-sobre">Salvar Sobre Mim</button>
+      </div>
+
+      <!-- Adicionar Stack -->
+      <div class="admin-section">
+        <h2>Adicionar Stack (Tecnologia)</h2>
+        <label>Nome da Tecnologia:</label>
+        <input type="text" id="stack-name" placeholder="Ex: JavaScript" />
+        <label>Upload do Ícone (PNG ou SVG):</label>
+        <input type="file" id="stack-icon" accept="image/*" />
+        <button class="btn-save" id="btn-save-stack">Salvar Stack</button>
+      </div>
+
+      <!-- Adicionar Projeto -->
+      <div class="admin-section">
+        <h2>Adicionar Novo Projeto</h2>
+        <label>Título:</label>
+        <input type="text" id="project-title" placeholder="Ex: Gerador de Planilhas" />
+        
+        <label>Descrição:</label>
+        <textarea id="project-desc" rows="3" placeholder="Descrição do projeto"></textarea>
+        
+        <label>Colaboradores (separados por vírgula):</label>
+        <input type="text" id="project-colab" placeholder="Ex: @ferokatos, @joao" />
+        
+        <label>Tipo de Projeto:</label>
+        <select id="project-type">
+          <option value="desktop">Desktop (Vídeo)</option>
+          <option value="web">Web (Link de Site / Iframe)</option>
+        </select>
+        
+        <!-- Aparece se for Web -->
+        <div id="web-options" class="hidden">
+          <label>Link do Site:</label>
+          <input type="url" id="project-link" placeholder="https://seu-site.com" />
+        </div>
+        
+        <!-- Aparece se for Desktop -->
+        <div id="desktop-options">
+          <label>Upload do Vídeo (MP4):</label>
+          <input type="file" id="project-video" accept="video/mp4" />
+        </div>
+        
+        <button class="btn-save" id="btn-save-project">Salvar Projeto</button>
+      </div>
+
+      <!-- Adicionar / Remover Mini Sessões -->
+      <div class="admin-section">
+        <h2>Adicionar Item (Formação / Experiência / Certificado)</h2>
+        <label>Seção:</label>
+        <select id="mini-type">
+          <option value="formacao">Formação Acadêmica</option>
+          <option value="experiencias">Experiência</option>
+          <option value="certificados">Certificado</option>
+        </select>
+        
+        <label>Título (ex: Ciência da Computação):</label>
+        <input type="text" id="mini-title" placeholder="Nome do curso/cargo" />
+        
+        <label>Instituição / Empresa:</label>
+        <input type="text" id="mini-inst" placeholder="Local" />
+        
+        <label>Período / Localização (ex: São Paulo, 2023):</label>
+        <input type="text" id="mini-period" placeholder="Cidade e Ano" />
+
+        <div id="mini-desc-container" class="hidden">
+          <label>Descrição (Apenas para Experiência):</label>
+          <textarea id="mini-desc" rows="4" placeholder="Descreva suas atividades, tecnologias usadas, etc..."></textarea>
+        </div>
+        
+        <label>Link (Opcional):</label>
+        <input type="url" id="mini-link" placeholder="https://" />
+        <input type="hidden" id="edit-mini-id" value="" />
+        <div style="display: flex; gap: 10px;">
+          <button class="btn-save" id="btn-save-mini">Salvar Item</button>
+          <button class="btn-save hidden" id="btn-cancel-mini" style="background: var(--surface); color: var(--text); border: 1px solid var(--overlay);">Cancelar Edição</button>
+        </div>
+        
+        <hr style="border: 1px solid rgba(255,255,255,0.1); margin: 30px 0;">
+        <h2>Gerenciar Itens</h2>
+        <div id="mini-list" style="margin-top: 15px; display: flex; flex-direction: column; gap: 10px;">
+          <!-- Lista carregada dinamicamente -->
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="admin.js"></script>
+  </body>
+</html>
